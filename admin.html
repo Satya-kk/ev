@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>EV Recharge Bunk - Admin</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Admin Panel</h1>
+    <div id="admin-auth">
+      <input id="adminEmail" placeholder="admin email" />
+      <input id="adminPassword" placeholder="password" type="password" />
+      <button id="adminSignin">Sign In</button>
+      <button id="adminSignout" style="display:none;">Sign Out</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="createBunkSection" style="display:none;">
+      <h2>Create Bunk</h2>
+      <input id="bunkName" placeholder="Name" /><br/>
+      <input id="bunkAddress" placeholder="Address" /><br/>
+      <input id="bunkLat" placeholder="Latitude" /><input id="bunkLng" placeholder="Longitude" /><br/>
+      <input id="bunkMobile" placeholder="Contact mobile" /><br/>
+      <button id="createBunkBtn">Create Bunk</button>
+    </section>
+
+    <section id="manageBunksSection" style="display:none;">
+      <h2>All Bunks</h2>
+      <ul id="adminBunksList"></ul>
+    </section>
+
+    <section id="viewBookings" style="display:none;">
+      <h2>Bookings</h2>
+      <ul id="bookingsList"></ul>
+    </section>
+  </main>
+
+  <script src="js/firebase.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
